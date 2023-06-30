@@ -1,3 +1,16 @@
+## v2.5.1
+
+[compare changes](https://github.com/philippdormann/calendar-link/compare/v2.5.0...v2.5.1)
+
+
+### 🩹 Fixes
+
+  - Add .dts ([515d6cb](https://github.com/philippdormann/calendar-link/commit/515d6cb))
+
+### ❤️  Contributors
+
+- Philipp Dormann <philipp@philippdormann.de>
+
 ## v2.5.0
 
 
