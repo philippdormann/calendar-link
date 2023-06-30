@@ -23,7 +23,10 @@ function formatTimes(
   return { start: startTime.format(format), end: endTime.format(format) };
 }
 
-export const eventify = (event: CalendarEvent, toUtc: boolean = true): NormalizedCalendarEvent => {
+export const eventify = (
+  event: CalendarEvent,
+  toUtc: boolean = true
+): NormalizedCalendarEvent => {
   const { start, end, duration, ...rest } = event;
   const startTime = toUtc ? dayjs(start).utc() : dayjs(start);
   const endTime = end
@@ -37,7 +40,7 @@ export const eventify = (event: CalendarEvent, toUtc: boolean = true): Normalize
         if (duration && duration.length == 2) {
           const value = Number(duration[0]);
           const unit = duration[1];
-          return startTime.add(value, unit);
+          //   return startTime.add(value, unit);
         }
         return toUtc ? dayjs().utc() : dayjs();
       })();
@@ -50,7 +53,10 @@ export const eventify = (event: CalendarEvent, toUtc: boolean = true): Normalize
 
 export const google = (calendarEvent: CalendarEvent): string => {
   const event = eventify(calendarEvent);
-  const { start, end } = formatTimes(event, event.allDay ? "allDay" : "dateTimeUTC");
+  const { start, end } = formatTimes(
+    event,
+    event.allDay ? "allDay" : "dateTimeUTC"
+  );
   const details: Google = {
     action: "TEMPLATE",
     text: event.title,
@@ -63,7 +69,9 @@ export const google = (calendarEvent: CalendarEvent): string => {
   if (event.guests && event.guests.length) {
     details.add = event.guests.join();
   }
-  return `https://calendar.google.com/calendar/render?${queryString.stringify(details)}`;
+  return `https://calendar.google.com/calendar/render?${queryString.stringify(
+    details
+  )}`;
 };
 
 export const outlook = (calendarEvent: CalendarEvent): string => {
@@ -79,7 +87,9 @@ export const outlook = (calendarEvent: CalendarEvent): string => {
     location: event.location,
     allday: event.allDay || false,
   };
-  return `https://outlook.live.com/calendar/0/action/compose?${queryString.stringify(details)}`;
+  return `https://outlook.live.com/calendar/0/action/compose?${queryString.stringify(
+    details
+  )}`;
 };
 
 export const outlookMobile = (calendarEvent: CalendarEvent): string => {
@@ -95,7 +105,9 @@ export const outlookMobile = (calendarEvent: CalendarEvent): string => {
     location: event.location,
     allday: event.allDay || false,
   };
-  return `https://outlook.live.com/calendar/0/deeplink/compose?${queryString.stringify(details)}`;
+  return `https://outlook.live.com/calendar/0/deeplink/compose?${queryString.stringify(
+    details
+  )}`;
 };
 
 export const office365 = (calendarEvent: CalendarEvent): string => {
@@ -111,7 +123,9 @@ export const office365 = (calendarEvent: CalendarEvent): string => {
     location: event.location,
     allday: event.allDay || false,
   };
-  return `https://outlook.office.com/calendar/0/action/compose?${queryString.stringify(details)}`;
+  return `https://outlook.office.com/calendar/0/action/compose?${queryString.stringify(
+    details
+  )}`;
 };
 
 export const office365Mobile = (calendarEvent: CalendarEvent): string => {
@@ -127,12 +141,17 @@ export const office365Mobile = (calendarEvent: CalendarEvent): string => {
     location: event.location,
     allday: event.allDay || false,
   };
-  return `https://outlook.office.com/calendar/0/deeplink/compose?${queryString.stringify(details)}`;
+  return `https://outlook.office.com/calendar/0/deeplink/compose?${queryString.stringify(
+    details
+  )}`;
 };
 
 export const yahoo = (calendarEvent: CalendarEvent): string => {
   const event = eventify(calendarEvent);
-  const { start, end } = formatTimes(event, event.allDay ? "allDay" : "dateTimeUTC");
+  const { start, end } = formatTimes(
+    event,
+    event.allDay ? "allDay" : "dateTimeUTC"
+  );
   const details: Yahoo = {
     v: 60,
     title: event.title,
@@ -147,7 +166,10 @@ export const yahoo = (calendarEvent: CalendarEvent): string => {
 
 export const aol = (calendarEvent: CalendarEvent): string => {
   const event = eventify(calendarEvent);
-  const { start, end } = formatTimes(event, event.allDay ? "allDay" : "dateTimeUTC");
+  const { start, end } = formatTimes(
+    event,
+    event.allDay ? "allDay" : "dateTimeUTC"
+  );
   const details: Aol = {
     v: 60,
     title: event.title,
@@ -176,7 +198,10 @@ export const ics = (calendarEvent: CalendarEvent): string => {
     .replace(/\n/gm, "\\n")
     .replace(/(\\n)[\s\t]+/gm, "\\n");
 
-  const { start, end } = formatTimes(event, event.allDay ? "allDay" : "dateTimeUTC");
+  const { start, end } = formatTimes(
+    event,
+    event.allDay ? "allDay" : "dateTimeUTC"
+  );
   const calendarChunks = [
     {
       key: "BEGIN",

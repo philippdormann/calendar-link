@@ -20,7 +20,8 @@ interface CalendarEventOrganizer {
   email: string;
 }
 
-interface NormalizedCalendarEvent extends Omit<CalendarEvent, "start" | "end" | "duration"> {
+interface NormalizedCalendarEvent
+  extends Omit<CalendarEvent, "start" | "end" | "duration"> {
   startTime: dayjs.Dayjs;
   endTime: dayjs.Dayjs;
 }
@@ -38,7 +39,8 @@ interface Google extends Record<string, string | boolean | number | undefined> {
   recur?: string;
 }
 
-interface Outlook extends Record<string, string | boolean | number | undefined> {
+interface Outlook
+  extends Record<string, string | boolean | number | undefined> {
   path: string;
   rru: string;
   startdt: string;
@@ -59,12 +61,20 @@ interface Yahoo extends Record<string, string | boolean | number | undefined> {
 }
 
 interface Aol extends Record<string, string | boolean | number | undefined> {
-    v: number;
-    title: string;
-    st: string;
-    et: string;
-    desc?: string;
-    in_loc?: string;
- }
+  v: number;
+  title: string;
+  st: string;
+  et: string;
+  desc?: string;
+  in_loc?: string;
+}
 
-export { CalendarEvent, CalendarEventOrganizer, NormalizedCalendarEvent, Outlook, Yahoo, Google, Aol };
+export {
+  CalendarEvent,
+  CalendarEventOrganizer,
+  NormalizedCalendarEvent,
+  Outlook,
+  Yahoo,
+  Google,
+  Aol,
+};

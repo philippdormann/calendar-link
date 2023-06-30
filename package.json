@@ -2,19 +2,20 @@
   "name": "@philippdormann/calendar-link",
   "version": "2.5.0",
   "description": "📅 Calendar link generator for popular services, like Google, Outlook, and Yahoo.",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "type": "module",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --clean",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "watch": "pnpm run build -- --watch src",
     "test": "vitest"
   },
@@ -32,9 +33,6 @@
     "yahoo"
   ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/philippdormann/calendar-link/issues"
-  },
   "devDependencies": {
     "changelogen": "0.5.3",
     "tsup": "7.1.0",
