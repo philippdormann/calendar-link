@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
-import { stringify } from "query-string";
+import queryString from "query-string";
 
 import {
   CalendarEvent,
@@ -63,7 +63,7 @@ export const google = (calendarEvent: CalendarEvent): string => {
   if (event.guests && event.guests.length) {
     details.add = event.guests.join();
   }
-  return `https://calendar.google.com/calendar/render?${stringify(details)}`;
+  return `https://calendar.google.com/calendar/render?${queryString.stringify(details)}`;
 };
 
 export const outlook = (calendarEvent: CalendarEvent): string => {
@@ -79,7 +79,7 @@ export const outlook = (calendarEvent: CalendarEvent): string => {
     location: event.location,
     allday: event.allDay || false,
   };
-  return `https://outlook.live.com/calendar/0/action/compose?${stringify(details)}`;
+  return `https://outlook.live.com/calendar/0/action/compose?${queryString.stringify(details)}`;
 };
 
 export const outlookMobile = (calendarEvent: CalendarEvent): string => {
@@ -95,7 +95,7 @@ export const outlookMobile = (calendarEvent: CalendarEvent): string => {
     location: event.location,
     allday: event.allDay || false,
   };
-  return `https://outlook.live.com/calendar/0/deeplink/compose?${stringify(details)}`;
+  return `https://outlook.live.com/calendar/0/deeplink/compose?${queryString.stringify(details)}`;
 };
 
 export const office365 = (calendarEvent: CalendarEvent): string => {
@@ -111,7 +111,7 @@ export const office365 = (calendarEvent: CalendarEvent): string => {
     location: event.location,
     allday: event.allDay || false,
   };
-  return `https://outlook.office.com/calendar/0/action/compose?${stringify(details)}`;
+  return `https://outlook.office.com/calendar/0/action/compose?${queryString.stringify(details)}`;
 };
 
 export const office365Mobile = (calendarEvent: CalendarEvent): string => {
@@ -127,7 +127,7 @@ export const office365Mobile = (calendarEvent: CalendarEvent): string => {
     location: event.location,
     allday: event.allDay || false,
   };
-  return `https://outlook.office.com/calendar/0/deeplink/compose?${stringify(details)}`;
+  return `https://outlook.office.com/calendar/0/deeplink/compose?${queryString.stringify(details)}`;
 };
 
 export const yahoo = (calendarEvent: CalendarEvent): string => {
@@ -142,22 +142,22 @@ export const yahoo = (calendarEvent: CalendarEvent): string => {
     in_loc: event.location,
     dur: event.allDay ? "allday" : false,
   };
-  return `https://calendar.yahoo.com/?${stringify(details)}`;
+  return `https://calendar.yahoo.com/?${queryString.stringify(details)}`;
 };
 
 export const aol = (calendarEvent: CalendarEvent): string => {
-    const event = eventify(calendarEvent);
-    const { start, end } = formatTimes(event, event.allDay ? "allDay" : "dateTimeUTC");
-    const details: Aol = {
-      v: 60,
-      title: event.title,
-      st: start,
-      et: end,
-      desc: event.description,
-      in_loc: event.location,
-      dur: event.allDay ? "allday" : false,
-    };
-    return `https://calendar.aol.com/?${stringify(details)}`;
+  const event = eventify(calendarEvent);
+  const { start, end } = formatTimes(event, event.allDay ? "allDay" : "dateTimeUTC");
+  const details: Aol = {
+    v: 60,
+    title: event.title,
+    st: start,
+    et: end,
+    desc: event.description,
+    in_loc: event.location,
+    dur: event.allDay ? "allday" : false,
+  };
+  return `https://calendar.aol.com/?${queryString.stringify(details)}`;
 };
 
 export const ics = (calendarEvent: CalendarEvent): string => {
