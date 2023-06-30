@@ -2,9 +2,6 @@
 ### Usage
 
 ```js
-// Usage with Node.js
-const { google, outlook, office365, yahoo, ics } = require("@philippdormann/calendar-link");
-
 // Usage with TypeScript or ES6
 import { google, outlook, office365, yahoo, ics } from "@philippdormann/calendar-link";
 
