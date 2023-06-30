@@ -1,3 +1,20 @@
+## v2.6.0
+
+[compare changes](https://github.com/philippdormann/calendar-link/compare/v2.5.2...v2.6.0)
+
+
+### 💅 Refactors
+
+  - Move to ESM-only ([44b3240](https://github.com/philippdormann/calendar-link/commit/44b3240))
+
+### 🏡 Chore
+
+  - Updated readme ([5637339](https://github.com/philippdormann/calendar-link/commit/5637339))
+
+### ❤️  Contributors
+
+- Philipp Dormann <philipp@philippdormann.de>
+
 ## v2.5.2
 
 [compare changes](https://github.com/philippdormann/calendar-link/compare/v2.5.1...v2.5.2)
