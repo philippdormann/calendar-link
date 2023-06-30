@@ -40,7 +40,7 @@ export const eventify = (
         if (duration && duration.length == 2) {
           const value = Number(duration[0]);
           const unit = duration[1];
-          //   return startTime.add(value, unit);
+          return startTime.add(value, unit as dayjs.ManipulateType);
         }
         return toUtc ? dayjs().utc() : dayjs();
       })();
