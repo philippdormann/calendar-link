@@ -1,3 +1,56 @@
+## v2.5.0
+
+
+### 💅 Refactors
+
+  - ⚠️  Move to tsup, vitest, changelogen ([dd1f5fe](https://github.com/philippdormann/calendar-link/commit/dd1f5fe))
+
+### 📖 Documentation
+
+  - Update README.md ([4d78929](https://github.com/philippdormann/calendar-link/commit/4d78929))
+  - Create .all-contributorsrc ([deff9b7](https://github.com/philippdormann/calendar-link/commit/deff9b7))
+  - Update README.md ([dc6dd26](https://github.com/philippdormann/calendar-link/commit/dc6dd26))
+  - Update .all-contributorsrc ([97e7558](https://github.com/philippdormann/calendar-link/commit/97e7558))
+  - Update README.md ([72767bd](https://github.com/philippdormann/calendar-link/commit/72767bd))
+  - Update .all-contributorsrc ([f4ecb53](https://github.com/philippdormann/calendar-link/commit/f4ecb53))
+  - Update README.md ([83fe6a7](https://github.com/philippdormann/calendar-link/commit/83fe6a7))
+  - Update .all-contributorsrc ([8454166](https://github.com/philippdormann/calendar-link/commit/8454166))
+  - Update README.md ([54d41f9](https://github.com/philippdormann/calendar-link/commit/54d41f9))
+  - Update .all-contributorsrc ([310f8d9](https://github.com/philippdormann/calendar-link/commit/310f8d9))
+  - Update README.md ([42a1222](https://github.com/philippdormann/calendar-link/commit/42a1222))
+  - Update .all-contributorsrc ([3fd0aea](https://github.com/philippdormann/calendar-link/commit/3fd0aea))
+  - Update README.md [skip ci] ([001c8c4](https://github.com/philippdormann/calendar-link/commit/001c8c4))
+  - Update .all-contributorsrc [skip ci] ([00bcfba](https://github.com/philippdormann/calendar-link/commit/00bcfba))
+  - Update README.md [skip ci] ([6c29fd6](https://github.com/philippdormann/calendar-link/commit/6c29fd6))
+  - Update .all-contributorsrc [skip ci] ([f412839](https://github.com/philippdormann/calendar-link/commit/f412839))
+  - Update README.md [skip ci] ([c1af416](https://github.com/philippdormann/calendar-link/commit/c1af416))
+  - Update .all-contributorsrc [skip ci] ([9e9b0ac](https://github.com/philippdormann/calendar-link/commit/9e9b0ac))
+  - Update README.md [skip ci] ([34fa8e3](https://github.com/philippdormann/calendar-link/commit/34fa8e3))
+  - Update .all-contributorsrc [skip ci] ([6106832](https://github.com/philippdormann/calendar-link/commit/6106832))
+
+### 🏡 Chore
+
+  - **package:** Update dependencies ([0cc8a8d](https://github.com/philippdormann/calendar-link/commit/0cc8a8d))
+  - **package:** Update lockfile yarn.lock ([fec6bb8](https://github.com/philippdormann/calendar-link/commit/fec6bb8))
+  - **package:** Update @types/jest to version 24.0.0 ([2ac5b10](https://github.com/philippdormann/calendar-link/commit/2ac5b10))
+  - **package:** Update lockfile yarn.lock ([3a466f2](https://github.com/philippdormann/calendar-link/commit/3a466f2))
+  - **package:** Update dayjs to version 1.8.4 ([6a8d84b](https://github.com/philippdormann/calendar-link/commit/6a8d84b))
+  - **package:** Update lockfile yarn.lock ([7f87d12](https://github.com/philippdormann/calendar-link/commit/7f87d12))
+  - **package:** Update @types/node to version 11.9.0 ([e212f9c](https://github.com/philippdormann/calendar-link/commit/e212f9c))
+  - **package:** Update lockfile yarn.lock ([e19f5a3](https://github.com/philippdormann/calendar-link/commit/e19f5a3))
+  - **package:** Update ts-jest to version 24.0.0 ([1cb9a14](https://github.com/philippdormann/calendar-link/commit/1cb9a14))
+  - **package:** Update lockfile yarn.lock ([690d14e](https://github.com/philippdormann/calendar-link/commit/690d14e))
+  - **package:** Update rollup-plugin-json to version 4.0.0 ([44effb5](https://github.com/philippdormann/calendar-link/commit/44effb5))
+  - **package:** Update lockfile yarn.lock ([db44033](https://github.com/philippdormann/calendar-link/commit/db44033))
+
+#### ⚠️  Breaking Changes
+
+  - ⚠️  Move to tsup, vitest, changelogen ([dd1f5fe](https://github.com/philippdormann/calendar-link/commit/dd1f5fe))
+
+### ❤️  Contributors
+
+- Philipp Dormann <philipp@philippdormann.de>
+
 ## v2.4.0 (2022-10-21)
 
 [📝 Release notes](https://github.com/AnandChowdhary/calendar-link/releases/tag/v2.4.0) · [💻 Compare](https://github.com/AnandChowdhary/calendar-link/compare/v2.3.1...v2.4.0) · [🔖 Tag](https://github.com/AnandChowdhary/calendar-link/tree/v2.4.0) · 🗄️ Archive ([zip](https://github.com/AnandChowdhary/calendar-link/archive/v2.4.0.zip) · [tar.gz](https://github.com/AnandChowdhary/calendar-link/archive/v2.4.0.tar.gz))
