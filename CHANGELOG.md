@@ -1,3 +1,16 @@
+## v2.6.1
+
+[compare changes](https://github.com/philippdormann/calendar-link/compare/v2.6.0...v2.6.1)
+
+
+### 🩹 Fixes
+
+  - Dayjs utc plugin import ([3466808](https://github.com/philippdormann/calendar-link/commit/3466808))
+
+### ❤️  Contributors
+
+- Philipp Dormann <philipp@philippdormann.de>
+
 ## v2.6.0
 
 [compare changes](https://github.com/philippdormann/calendar-link/compare/v2.5.2...v2.6.0)
