@@ -1,3 +1,16 @@
+## v2.6.2
+
+[compare changes](https://github.com/philippdormann/calendar-link/compare/v2.6.1...v2.6.2)
+
+
+### 🩹 Fixes
+
+  - Missing dayjs.ManipulateType in eventify ([d3bb788](https://github.com/philippdormann/calendar-link/commit/d3bb788))
+
+### ❤️  Contributors
+
+- Philipp Dormann <philipp@philippdormann.de>
+
 ## v2.6.1
 
 [compare changes](https://github.com/philippdormann/calendar-link/compare/v2.6.0...v2.6.1)
